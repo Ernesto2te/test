@@ -1,0 +1,205 @@
+
+/*Botones*/
+button{
+    margin-right: 20px !important;
+}
+.light{
+    padding: 8px 16px;
+    width: 150px;
+    height: 50px;
+    background: none;
+    border-color: #fff;
+    color: #fff ;
+    border-radius: 8px;
+}
+.light:hover{
+    background-color:  #040e21b3;
+}
+/* solo es para el boton de la tabla class=edicion */
+.edicion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 40px;
+    height: 40px;
+    background: #F79D18;
+    border-radius: 4px;
+    color: black;
+}
+
+/*Iconos dentro de Botones  */
+button i{
+    padding-left: 20px;
+}
+
+/*Botones de examinar y agregar*/
+.Examinar{
+    padding: 8px 16px;
+    width: 150px;
+    height: 50px;
+    background: #037D17;
+    border-color: #037D17;
+    color: #fff ;
+    border-radius: 8px;
+    
+}
+.Agregar{
+    padding: 8px 16px;
+    width: 150px;
+    height: 50px;
+    background:  #F79D18;
+    border-color:  #F79D18;
+    color: #000000;
+
+    border-radius: 8px;
+}
+/*//Botones*/
+
+/*Menu de seleccion */
+#menu{
+    background-color:  #0097A7;
+    border-radius: 1ex;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    border-radius: 8px;
+}
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;  
+}
+
+#menu ul li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 0;
+}
+
+
+#menu ul li a{
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#menu ul li a:hover{
+    background-color:  #F69D18;
+    color: black;
+}
+
+/*//Menu de seleccion */
+
+/*funcion cuando el iten este active de menu*/
+#menu .active{
+    color:black!important;
+    background-color:  #F69D18;
+}
+
+/*Tabla */
+thead{
+    background: #03ADE380;
+}
+
+tbody{
+    background: #D9D9D9!important;
+}
+
+
+/* Input  seach icono*/
+.dataTables_filter{
+    background-image: url('../img/magnifying-glass-solid.svg');
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    background-size: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+    height: 30px;
+}
+
+/* //Input  seach icono*/
+.table {
+    padding-top: 30px;/*separacion de la tabla de de los componetes de busqueda */
+}
+/*//tabla*/
+
+
+/* Inputs */
+
+input {
+    width: 100% !important;
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+    
+    border-bottom: 2px solid  gray !important;
+    padding: 12px 12px 0px 35px;
+    border-radius: 5px;
+}
+
+/* Input file Botón*/
+input::file-selector-button {
+    display: none;
+}
+/* Input file*/
+
+
+
+/* Modal*/
+/* cabezera del Modal*/
+.modal-header{
+    background-color: rgba(4, 14, 33, 0.9) ;
+    color: #fff;
+}
+/* //cabezera del Modal*/
+/* pie del Modal*/
+.modal-footer{
+    background-color:#25496B ;
+}
+/*// pie del Modal*/
+/* cuerpo del Modal*/
+
+.modal-body .input-wrapper {
+    position: relative;
+}
+.modal-body select {
+    width: 100% !important;
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+    
+    border-bottom: 2px solid  gray !important;
+    padding: 12px 12px 0px 35px;
+    border-radius: 5px;
+}
+
+.modal-body  i {
+    color:gray;
+    position: absolute;
+    top: 25px; left: 10px;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+}
+
+.modal-body  input:focus,select:focus{
+    border-bottom: 2px solid  #03ADE380 !important;
+}
+.modal-body  input:focus+i,select:focus+i{
+    color:  #03ADE380 !important;
+}
+/*btn de cerrar modal */
+.btn-close {
+    background-color: #fff !important;
+}
+/* cuerpo del Modal*/
+/* Modal*/

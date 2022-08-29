@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../../../assets/css/style_Center.css">
+        <link rel="stylesheet" href="../../../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <script src="../../../assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <!--iconos-->
+        <script src="https://kit.fontawesome.com/d1c184a741.js" crossorigin="anonymous"></script>
+        <!-- datatable -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <!--/ /datatable -->
+        <title>Cargar Archivos </title>
+    </head>
+    <body>
+        <div class="container" >
+
+            <div class="container-fluid p-5">
+                <!-- Menu de Archivos-->
+                <h2> Datos de Docente</h2>
+                <div id="menu">
+                    <ul class="nav " >
+                        <li class="nav-item">
+                            <a class="nav-link " href="C_Alumnos.html"><b> Alumnos</b></a>
+                        </li>
+                        <li class="nav-item">
+                        <a  class="nav-link active " href="C_Docentes.html"><b>Docentes</b></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="C_Materias.html"><b>Materias</b></a>
+                        </li>
+                        <li class="nav-item ">
+                        <a class="nav-link " href="C_Carrera.html"><b>Carreras</b></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--// Menu de Archivos-->
+            
+                <br><br>
+                <!-- Tabla dinamica  de la BD -->
+                <table class="table" id="example">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Clave del Trabajador </th>
+                                <th scope="col">Area academica </th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <h5 class="card-tittle">Resultados </h5>
+                            <div class="container_card">
+                            <tr>  
+                                <td style="vertical-align: middle;">1</td>
+                                <td style="vertical-align: middle;"> <b>Jesus Ernesto Hernandez Aguilar</b> <br> <em> ernesto@gmail.com </em></td>
+                                <td style="vertical-align: middle;">GAGL930116HY4</td>
+                                <td style="vertical-align: middle;">ISIC</td>
+                                <td style="vertical-align: middle;">Activo</td>
+                                <td> 
+                                    <center>
+                                        <div class="edicion" data-bs-toggle="modal" data-bs-target="#myModal">
+                                            <i class="fa-solid fa-pencil " ></i>
+                                        </div>
+                                    </center>
+                                    
+                                    
+                                </td>
+                            </tr>    
+                        </tbody>
+                </table>
+                <!--// Tabla dinamica  de la BD -->
+                <br><br>
+                
+                    <div class="row">
+                        <div class="col-lg-3"> 
+                        </div>
+                        <div class="col-lg-6">  
+                            <center>
+                            <div class="btn">
+                            
+                                    <button type="button" class="Examinar"data-bs-toggle="modal" data-bs-target="#Examinar">Examinar <i class="fa-solid fa-file-excel"></i></button>
+                                    <button type="button" class="Agregar" data-bs-toggle="modal" data-bs-target="#myModal"><b>Agregar </b> <i class="fa-solid fa-plus"></i></button>
+                                
+                            </div>
+                            </center>
+                        </div>
+                        <div class="col-lg-3">
+
+                        </div>
+
+                    </div>
+                
+            </div>
+        </div>
+        <!--Modal para Examina Excel-->
+        <div class="modal" id="Examinar">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Examinar Documento</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        
+                        <div class="row">
+                            <div class="col">
+                                <p>Seleccione el Excel</p>
+                                <br>
+                                <div class="input-wrapper">
+                                    <input type="file">
+                                    <i class="fa-solid fa-file-excel"></i>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <center>
+                                    <img src="../../../assets/img/FileUpLoad_lidianet.gif" width="200px">
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="light" >  Guardar   <i class="fa-solid fa-floppy-disk"></i></button>
+                        <button type="button" class="light" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//Modal para Examina Excel-->
+        <!--Modal para edicion y insercion de datos  -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Datos de Docentes</h4> 
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="separadortop"></div>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <center>
+                            <img src="../../../assets/img/00c537bdf08547f031540521892e5aa7.gif"  class="rounded-circle" width="200px">
+                        </center>
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <input type="text" name="Nombre" >
+                                    <i class="fa-solid fa-user"></i>
+                                    <br><p>Nombre </p>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="text" name="Nombre" >
+                                    <i class="fa-solid fa-id-card"></i>
+                                    <br><p>Clave de Trabajador </p> 
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <input type="text" name="Nombre"  >
+                                    <i class="fa-solid fa-user"></i>
+                                    <br><p>Apellido Paterno</p>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="text" name="Nombre" >
+                                    <i class="fa-solid fa-building-user"></i>
+                                    <br><p>Área</p>
+                                </div>
+                                <div class="input-wrapper">
+                                    
+                                    <select name="status"  id="">
+                                        <option ></option>
+                                        <option value="Activo">Activo</option>
+                                        <option value="Inactivo">Inactivo</option>
+                                    </select>
+                                    <i class="fa-solid fa-sliders"></i>
+                                    <br><p>Estado</p> 
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-wrapper">
+                                    <input type="text" name="Nombre"  >
+                                    <i class="fa-solid fa-user"></i>
+                                    <br><p>Apellido Materno</p> 
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="text" name="Nombre" >
+                                    <i class="fa-solid fa-at"></i>
+                                    <br><p>Correo</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <div class="btn">
+                            <button type="button" class="light" >Guardar<i class="fa-solid fa-floppy-disk"></i></button>
+                            <button type="button" class="light" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//Modal para edicion y insercion de datos  -->
+    </body>
+</html>
+
+
+<!-- cambiamos idioma ala tabla  -->
+<script>
+    $(document).ready(function() {
+//   $.fn.DataTable.ext.pager.numbers_length = 5;
+    $('#example').DataTable( {
+
+// que aparezcan ultimo siguiente etc...
+    "pagingType":"full_numbers",
+// ordenamos
+    "order": [[ 2, "ASC" ]],
+    //    cambiamos idioma
+    "language": {
+                    "decimal":        ".",
+                    "emptyTable":     "No hay datos para mostrar",
+                    "info":           "del _START_ al _END_ (_TOTAL_ total)",
+                    "infoEmpty":      "del 0 al 0 (0 total)",
+                    "infoFiltered":   "(filtrado de todas las _MAX_ entradas)",
+                    "infoPostFix":    "",
+                    "thousands":      "'",
+                    "lengthMenu":     "Mostrar _MENU_ entradas",
+                    "loadingRecords": "Cargando...",
+                    "processing":     "Procesando...",
+                    "search":         " ",
+                    "searchPlaceholder": "Buscar " ,
+                    "zeroRecords":    "No hay resultados",
+                    "paginate": {
+                                "first":      "Primero",
+                                "last":       "Último",
+                                "next":       "Siguiente",
+                                "previous":   "Anterior"
+                                },
+                    "aria": {
+                            "sortAscending":  ": ordenar de manera Ascendente",
+                            "sortDescending": ": ordenar de manera Descendente ",
+                            }
+                }
+
+    } );  
+} );
+
+</script>
+<!-- //cambiamos idioma ala tabla  -->
+
+<!-- //cambiamos idioma ala tabla  -->
